@@ -22,7 +22,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct AutoScroller: View{
     var images: [String]
-//    let timer = Timer.publish(every: 3.0, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 3.0, on: .main, in: .common).autoconnect()
     
     @State private var count:Int = 0
 
@@ -64,12 +64,12 @@ struct AutoScroller: View{
                 }
                 
             }
-//            .onReceive(timer, perform: {
-//                _ in
-//                withAnimation(.default){
-//                    count = count == images.count ? 0 : count+1
-//                }
-//            })
+            .onReceive(timer, perform: {
+                _ in
+                withAnimation(.default){
+                    count = count == images.count ? 0 : count+1
+                }
+            })
         }
     }
 }
