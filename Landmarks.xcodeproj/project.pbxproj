@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC35CB252ABA1E2200E82357 /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35CB242ABA1E2200E82357 /* VisualEffectBlur.swift */; };
 		D8B25C902AB88E2600B33385 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B25C8F2AB88E2600B33385 /* LandmarksApp.swift */; };
 		D8B25C922AB88E2600B33385 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B25C912AB88E2600B33385 /* ContentView.swift */; };
 		D8B25C942AB88E2700B33385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B25C932AB88E2700B33385 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC35CB242ABA1E2200E82357 /* VisualEffectBlur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
 		D8B25C8C2AB88E2600B33385 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B25C8F2AB88E2600B33385 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		D8B25C912AB88E2600B33385 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				D8B25C8F2AB88E2600B33385 /* LandmarksApp.swift */,
 				D8B25C912AB88E2600B33385 /* ContentView.swift */,
+				AC35CB242ABA1E2200E82357 /* VisualEffectBlur.swift */,
 				D8B25C932AB88E2700B33385 /* Assets.xcassets */,
 				D8B25C952AB88E2700B33385 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC35CB252ABA1E2200E82357 /* VisualEffectBlur.swift in Sources */,
 				D8B25C922AB88E2600B33385 /* ContentView.swift in Sources */,
 				D8B25C902AB88E2600B33385 /* LandmarksApp.swift in Sources */,
 			);

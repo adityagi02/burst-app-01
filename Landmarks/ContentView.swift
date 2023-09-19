@@ -28,32 +28,26 @@ struct AutoScroller: View{
 
     var body: some View {
         ZStack{
-            Color.green
+            Color.secondary
                 .ignoresSafeArea()
             
-            ZStack{
-                TabView(selection: $count, content: {
-                    ForEach(0..<images.count){ i in
+            Group{
+                TabView(selection: $count){
+                    ForEach(0..<images.count, id: \.self){ i in
                         ZStack(alignment: .topLeading){
                             Image("\(images[i])").resizable().tag(i)
-                            Text("Sample Text")
-                                .font(.system(size:30, weight: .bold))
-                                .foregroundColor(.black)
-                                .padding(20)
-                                
-                                
-                                
-                        }
+                                .frame(width: 350, height: 200)
+                        }.background(VisualEffectBlur()).shadow(radius: 20)
                         
                     }
-                })
+                }
                 .frame(height: 300)
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-                
+                .ignoresSafeArea()
                     HStack{
-                        ForEach(0..<images.count){ ind in
+                        ForEach(0..<images.count, id: \.self){ ind in
                             Capsule()
-                                .fill(Color.white.opacity(count == ind ? 1 : 0.55))
+                                .fill(Color.white.opacity(count == ind ? 1 : 0.33))
                                 .frame(width: 35, height: 8)
                                 .onTapGesture(perform: {
                                     count = ind
@@ -64,8 +58,7 @@ struct AutoScroller: View{
                 }
                 
             }
-            .onReceive(timer, perform: {
-                _ in
+            .onReceive(timer, perform: { _ in
                 withAnimation(.default){
                     count = count == images.count ? 0 : count+1
                 }
