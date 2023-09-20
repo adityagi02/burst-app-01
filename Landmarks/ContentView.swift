@@ -49,12 +49,12 @@ struct AutoScroller: View {
                 ForEach(0..<imageNames.count, id: \.self) { index in
                     Capsule()
                         .fill(Color.white.opacity(selectedImageIndex == index ? 1 : 0.33))
-                        .frame(width: 35, height: 8)
+                        .frame(width: selectedImageIndex==index ? 35 : 12, height: 8)
                         .onTapGesture {
                             selectedImageIndex = index
                         }
                 }
-                .offset(y: 130)
+                .offset(y: 80)
             }
         }
         .onReceive(timer) { _ in
